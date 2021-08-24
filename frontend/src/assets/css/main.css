@@ -1,0 +1,29 @@
+body {
+    background-color: #fbfbfb;
+}
+
+.login-wrapper {
+    border-style: solid;
+    border-radius: 1em;
+    border-width: 1px;
+    margin: 0 auto;
+    border-color: #cfcfcf;
+    width: 25vw;
+    padding: 20px;
+    padding-top: 35px;
+
+}
+
+.login-wrapper input {
+    width: 80%;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-wrapper label {
+    left: 0;
+}
+
+li, ul {
+    list-style: none;
+}
