@@ -3,9 +3,15 @@ const app = express();
 const config = require("./config.js");
 const MongoClient = require('mongodb').MongoClient, Server = require('mongodb').Server;
 app.use(express.json());
+var admin = require("firebase-admin");
+var serviceAccount = require("./data/credentials.json");
 
 const userFunctions = require('./users'); 
 const catalogFunctions = require('./catalog');
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount)
+});
 
 var dbConnection = null;
 MongoClient.connect('mongodb://localhost:27017/', { useUnifiedTopology: true, useNewUrlParser: true }, function (err, client) {
